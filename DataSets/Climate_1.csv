@@ -1,0 +1,193 @@
+Country,Temperature,ISO3
+Afghanistan,12.6,AFG
+Albania,11.4,ALB
+Algeria,22.5,DZA
+Andorra,7.6,AND
+Angola,21.55,AGO
+Antigua and Barbuda,25.85,ATG
+Argentina,14.8,ARG
+Armenia,7.15,ARM
+Australia,21.65,AUS
+Austria,6.35,AUT
+Azerbaijan,11.95,AZE
+Bahamas,24.85,BHS
+Bahrain,26.8,BHR
+Bangladesh,25,BGD
+Barbados,26,BRB
+Belarus,6.15,BLR
+Belgium,9.55,BEL
+Belize,25.35,BLZ
+Benin,27.55,BEN
+Bhutan,7.4,BTN
+Bolivia,21.55,BOL
+Bosnia and Herzegovina,9.85,BIH
+Botswana,21.5,BWA
+Brazil,24.95,BRA
+Brunei,26.85,BRN
+Bulgaria,10.55,BGR
+Burkina Faso,28.29,BFA
+Burundi,19.8,BDI
+Cambodia,26.8,KHM
+Cameroon,24.6,CMR
+Canada,-5.1,CAN
+Cape Verde,23.3,CPV
+Central African Republic,24.9,CAF
+Chad,26.55,TCD
+Chile,8.45,CHL
+China,7.5,CHN
+Colombia,24.5,COL
+Comoros,25.3,COM
+Costa Rica,24.8,CRI
+Croatia,10.9,HRV
+Cuba,25.2,CUB
+Cyprus,18.45,CYP
+Czech Republic,7.55,CZE
+Democratic Republic of the Congo,24,COD
+Denmark,-3.7,DNK
+Djibouti,28,DJI
+Dominica,22.35,DMA
+Dominican Republic,24.55,DOM
+Ecuador,21.85,ECU
+Egypt,22.1,EGY
+El Salvador,24.45,SLV
+Equatorial Guinea,24.55,GNQ
+Eritrea,25.5,ERI
+Estonia,2,EST
+Eswatini,21.4,SWZ
+Ethiopia,22.2,ETH
+Federated States of Micronesia,25.85,FSM
+Fiji,24.4,FJI
+Finland,1.55,FIN
+France,10.7,FRA
+Gabon,25.05,GAB
+Gambia,27.5,GMB
+Georgia,5.65,GEO
+Germany,8.4,DEU
+Ghana,27.2,GHA
+Greece,15.4,GRC
+Grenada,26,GRD
+Guatemala,23.45,GTM
+Guinea,25.7,GIN
+Guinea-Bissau,26.75,GNB
+Guyana,26,GUY
+Haiti,24.9,HTI
+Honduras,23.5,HND
+Hong Kong,21.45,HKG
+Hungary,9.75,HUN
+Iceland,-0.7,ISL
+India,23.65,IND
+Indonesia,25.85,IDN
+Iran,17.25,IRN
+Iraq,21.4,IRQ
+Ireland,9.3,IRL
+Israel,19.2,ISR
+Italy,13.45,ITA
+Ivory Coast,26.35,CIV
+Jamaica,24.95,JAM
+Japan,11.15,JPN
+Jordan,18.3,JOR
+Kazakhstan,5.5,KAZ
+Kenya,24.75,KEN
+Kiribati,28.2,KIR
+Kuwait,27.15,KWT
+Kyrgyzstan,2.1,KGZ
+Laos,22.8,LAO
+Latvia,5.6,LVA
+Lebanon,15,LBN
+Lesotho,11.85,LSO
+Liberia,25.3,LBR
+Libya,21.8,LBY
+Liechtenstein,5.8,LIE
+Lithuania,6.2,LTU
+Luxembourg,8.65,LUX
+Madagascar,22.65,MDG
+Malawi,21.9,MWI
+Malaysia,25.4,MYS
+Maldives,28,MDV
+Mali,28.25,MLI
+Malta,19.2,MLT
+Marshall Islands,27.4,MHL
+Mauritania,27.65,MRT
+Mauritius,22.4,MUS
+Mexico,21,MEX
+Moldova,9.45,MDA
+Monaco,13.55,MCO
+Mongolia,1.7,MNG
+Montenegro,10.55,MNE
+Morocco,17.1,MAR
+Mozambique,23.8,MOZ
+Myanmar,13.05,MMR
+Namibia,19.95,NAM
+Nepal,8.1,NPL
+Netherlands,9.25,NLD
+New Zealand,10.55,NZL
+Nicaragua,24.9,NIC
+Niger,27.15,NER
+Nigeria,27,NGA
+North Korea,5.7,PRK
+North Macedonia,9.8,MKD
+Norway,1.5,NOR
+Oman,25.6,OMN
+Pakistan,20.2,PAK
+Palau,27.6,PLW
+Panama,25.4,PAN
+Papua New Guinea,25.25,PNG
+Paraguay,23.55,PRY
+Peru,19.6,PER
+Philippines,25.55,PHL
+Poland,7.85,POL
+Portugal,15.15,PRT
+Qatar,27.15,QAT
+Republic of the Congo,24.55,COG
+Romania,8.8,ROU
+Russia,-5.35,RUS
+Rwanda,17.85,RWA
+São Tomé and Príncipe,23.75,STP
+Saint Kitts and Nevis,24.5,KNA
+Saint Lucia,25.5,LCA
+Saint Vincent and the Grenadines,26.8,VCT
+Samoa,26.7,WSM
+San Marino,11.85,SMR
+Saudi Arabia,24.65,SAU
+Senegal,27.85,SEN
+Serbia,10.55,SRB
+Seychelles,27.15,SYC
+Sierra Leone,26.05,SLE
+Singapore,26.45,SGP
+Slovakia,6.8,SVK
+Slovenia,8.9,SVN
+Solomon Islands,25.65,SLB
+Somalia,27.05,SOM
+South Africa,17.75,ZAF
+South Korea,11.5,KOR
+Spain,13.3,ESP
+Sri Lanka,26.95,LKA
+Sudan,26.9,SDN
+Suriname,25.7,SUR
+Sweden,1.75,SWE
+Switzerland,5.1,CHE
+Syria,17.75,SYR
+Tajikistan,6.4,TJK
+Tanzania,22.35,TZA
+Thailand,26.3,THA
+Timor-Leste,25.25,TLS
+Togo,27.15,TGO
+Tonga,25.25,TON
+Trinidad and Tobago,25.75,TTO
+Tunisia,19.2,TUN
+Turkey,9.9,TUR
+Turkmenistan,15.1,TKM
+Tuvalu,27.65,TUV
+Uganda,22.8,UGA
+Ukraine,8.3,UKR
+United Arab Emirates,26.65,ARE
+United Kingdom,8.45,GBR
+United States,8.55,USA
+Uruguay,17.55,URY
+Uzbekistan,12.05,UZB
+Vanuatu,23.95,VUT
+Venezuela,25.35,VEN
+Vietnam,24.45,VNM
+Yemen,23.85,YEM
+Zambia,21.4,ZMB
+Zimbabwe,21,ZWE
