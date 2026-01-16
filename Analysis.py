@@ -17,4 +17,4 @@ crops = pd.read_csv("DataSets_Raw/Crop_Yield_1.csv")
 
 print("Raw crop columns: ")
 print(crops.columns)
-crops_clean = crops[["Crop","Yield","Year"]]
+
