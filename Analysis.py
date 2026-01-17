@@ -1,4 +1,4 @@
-import pandas as pd
+                                           import pandas as pd
 
 df = pd.read_csv("DataSets_Loaded/countries.csv")
 
@@ -12,3 +12,4 @@ if result.empty:
     print("Country not found")
 else:
     print("Climate:", result.iloc[0]['Temperature'])
+print("Hey")
