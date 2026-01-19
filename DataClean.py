@@ -4,6 +4,7 @@ import os
 
 os.makedirs("DataSets_Loaded", exist_ok=True)
 
+# ---------------- COLUMN MAP ----------------
 COLUMN_MAP = {
     "Country": ["country", "area", "country name", "nation", "territory"],
     "ISO3": ["iso3", "iso_code", "iso"],
@@ -51,12 +52,12 @@ CUISINE_TO_COUNTRY = {
     "chinese": "China"
 }
 
+# ---------------- HELPERS ----------------
 def find_column(df, options):
-    df_cols = [col.lower().strip() for col in df.columns]
+    cols = [c.lower().strip() for c in df.columns]
     for opt in options:
-        opt = opt.lower().strip()
-        if opt in df_cols:
-            return df.columns[df_cols.index(opt)]
+        if opt.lower() in cols:
+            return df.columns[cols.index(opt.lower())]
     return None
 
 def fix_list(x):
@@ -67,60 +68,51 @@ def fix_list(x):
     except:
         return []
 
+# ================= COUNTRIES =================
 countries = pd.read_csv("DataSets_Raw/Climate_1.csv")
 
-country_col = find_column(countries, COLUMN_MAP["Country"])
-iso3_col = find_column(countries, COLUMN_MAP["ISO3"])
-temp_col = find_column(countries, COLUMN_MAP["Temperature"])
-
-required = [country_col, iso3_col, temp_col]
-if None in required:
-    raise ValueError("Missing required columns in Climate_1.csv")
-
-countries_clean = countries[[country_col, iso3_col, temp_col]].copy()
-countries_clean.columns = ["Country", "ISO3", "Temperature"]
-
+countries_clean = countries[["Country", "ISO3", "Temperature"]].copy()
 countries_clean["Country"] = (
-    countries_clean["Country"].astype(str).str.lower().str.strip()
+    countries_clean["Country"]
+    .astype(str).str.lower().str.strip()
     .replace(COUNTRY_NORMALIZATION)
     .str.title()
 )
 
 countries_clean.to_csv("DataSets_Loaded/countries.csv", index=False)
 
+# ================= CROPS =================
 crops = pd.read_csv("DataSets_Raw/Crops_1.csv")
 
-country_col = find_column(crops, COLUMN_MAP["Country"])
-crop_col = find_column(crops, COLUMN_MAP["Crop"])
-value_col = find_column(crops, COLUMN_MAP["Value"])
-element_col = find_column(crops, COLUMN_MAP["Element"])
-
-required = [country_col, crop_col, value_col, element_col]
-if None in required:
-    raise ValueError("Missing required columns in Crops_1.csv")
-
-crops_clean = crops[[country_col, crop_col, value_col, element_col]].copy()
-crops_clean.columns = ["Country", "Crop", "Value", "Element"]
+crops_clean = crops[["Area", "Item", "Element", "Value"]].copy()
+crops_clean.columns = ["Country", "Crop", "Element", "Value"]
 
 crops_clean["Country"] = (
-    crops_clean["Country"].astype(str).str.lower().str.strip()
+    crops_clean["Country"]
+    .astype(str).str.lower().str.strip()
     .replace(COUNTRY_NORMALIZATION)
     .str.title()
 )
 
 crops_clean["Crop"] = crops_clean["Crop"].astype(str).str.lower().str.strip()
 crops_clean["Element"] = crops_clean["Element"].astype(str).str.lower().str.strip()
-
 crops_clean["Value"] = pd.to_numeric(crops_clean["Value"], errors="coerce")
+
 crops_clean = crops_clean[crops_clean["Element"] == "production"]
 crops_clean.rename(columns={"Value": "Production"}, inplace=True)
 
-crops_country = crops_clean.groupby("Country", as_index=False)["Production"].sum()
+crops_country = (
+    crops_clean
+    .groupby(["Country", "Crop"], as_index=False)["Production"]
+    .sum()
+)
+
 crops_country["Production"] = crops_country["Production"].round(0).astype("Int64")
 
 crops_clean.to_csv("DataSets_Loaded/crops.csv", index=False)
 crops_country.to_csv("DataSets_Loaded/crops_country.csv", index=False)
 
+# ================= RECIPES =================
 recipes = pd.read_csv("DataSets_Raw/Recipes.csv")
 
 recipes_clean = recipes.rename(columns={
@@ -165,10 +157,5 @@ recipes_country = recipes_clean.groupby("Country", dropna=False).agg(
     Avg_CookTime=("CookTime", "mean"),
     Avg_PrepTime=("PrepTime", "mean")
 ).reset_index()
-
-recipes_country["Avg_Calories"] = recipes_country["Avg_Calories"].round(2)
-recipes_country["Avg_CookTime"] = recipes_country["Avg_CookTime"].round(1)
-recipes_country["Avg_PrepTime"] = recipes_country["Avg_PrepTime"].round(1)
-
 
 recipes_country.to_csv("DataSets_Loaded/recipes_country.csv", index=False)
